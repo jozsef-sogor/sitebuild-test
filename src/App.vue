@@ -1,28 +1,65 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav-bar />
+    <main class="d-flex min-vh-100">
+      <sidebar-info class="d-none d-lg-block" />
+      <div class="transactioncard-holder w-100">
+        <tab-bar />
+        <table-header class="d-none d-md-block" />
+        <transaction-card 
+          v-for="transaction in transactions"
+          :key="transaction._id"
+          :transaction="transaction"
+        />
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TransactionCard from '@/components/TransactionCard'
+import SidebarInfo from '@/components/SidebarInfo'
+import TableHeader from '@/components/TableHeader'
+import NavBar from '@/components/NavBar'
+import TabBar from '@/components/TabBar'
+
+import testData from '@/assets/data.json'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      transactions: testData.transactions
+
+    }
+  },
+  created() {
+    this.fetchData()
+  },
+  methods: {
+    fetchData: function() {
+      //const url = process.env.BASE_URL;
+      fetch(`/data.json`)
+      .then(data => console.log(JSON.parse(data.body)))
+    }
+  },
   components: {
-    HelloWorld
+    TransactionCard,
+    SidebarInfo,
+    TableHeader,
+    NavBar,
+    TabBar
   }
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #FAFAFC;
+}
+
+main {
+  max-width: 1173px;
+  margin: 0 auto;
 }
 </style>

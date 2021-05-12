@@ -1,0 +1,91 @@
+{
+  "transactions": [
+    {
+      "_id": "EPAYMT85HJR33783E",
+      "method": "Bankártya",
+      "status": "Beérkezett",
+      "dateOfPayment": "2019.06.25.",
+      "payments": [
+        {
+          "_id": "dsgkdkljllp24",
+          "quotedAmount": 5000,
+          "paidAmount": 5000,
+          "currency": "Ft",
+          "insurancePeriod": "2019.06.02. - 07.01."
+        }
+      ],
+      "attachment": {
+        "name": "Fizetési nyugta",
+        "type": "PDF"
+      }
+    },
+    {
+      "_id": "EPAYMT83435FE783E",
+      "method": "Átutalás",
+      "status": "Folyamatban",
+      "dateOfPayment": "2019.06.25.",
+      "payments": [
+        {
+          "_id": "dsgk6453tges42424",
+          "quotedAmount": 5000,
+          "paidAmount": 5000,
+          "currency": "Ft",
+          "insurancePeriod": "2019.06.02. - 07.01."
+        },
+        {
+          "_id": "dsglksg43424",
+          "quotedAmount": 7500,
+          "paidAmount": 7500,
+          "currency": "Ft",
+          "insurancePeriod": "2019.07.02. - 08.01."
+        }
+      ],
+      "attachment": {
+        "name": "Fizetési nyugta",
+        "type": "PDF"
+      }
+    },
+    {
+      "_id": "EPAYM5533E",
+      "method": "Átutalás",
+      "status": "Sikertelen",
+      "dateOfPayment": "2019.06.25.",
+      "payments": [
+        {
+          "_id": "dsgklag33424",
+          "quotedAmount": 7500,
+          "paidAmount": 7500,
+          "currency": "Ft",
+          "insurancePeriod": "2019.07.02. - 08.01."
+        }
+      ],
+      "attachment": {}
+    },
+    {
+      "_id": "EPAYMT87483R33783E",
+      "method": "Átutalás",
+      "status": "Folyamatban",
+      "dateOfPayment": "2019.06.25.",
+      "payments": [
+        {
+          "_id": "dsgkdl42424",
+          "quotedAmount": 5000,
+          "paidAmount": 5000,
+          "currency": "Ft",
+          "insurancePeriod": "2019.06.02. - 07.01."
+        },
+        {
+          "_id": "dsgk2t43wga24",
+          "quotedAmount": 7500,
+          "paidAmount": 7500,
+          "currency": "Ft",
+          "insurancePeriod": "2019.07.02. - 08.01."
+        }
+      ],
+      "attachment": {
+        "name": "Fizetési nyugta",
+        "type": "PDF"
+      }
+    } 
+  ]
+}

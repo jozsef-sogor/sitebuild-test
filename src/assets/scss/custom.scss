@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+@import './font-variables';
+@import './colors';
+
+$box-shadow: 0px 2px 12px rgba(10, 17, 61, 0.1);
+
+$enable-shadows: true;
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-weight-bold: 600;
+
+h1,h2,h3,h4,h5,h6,p,a,li,span {font-family: $font-family-sans-serif}
+
+
+
+
+
+
+
+
+
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
